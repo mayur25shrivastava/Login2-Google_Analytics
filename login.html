@@ -56,17 +56,17 @@
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login">
+                <form class="login" id="form" name="loginForm" method="post" action="login.html">
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="User name / Email">
+                        <input type="text" name="username" id="username" class="login__input" placeholder="User name / Email">
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password">
+                        <input type="password" name="password" id="password" class="login__input" placeholder="Password">
                     </div>
                     <button class="button login__submit">
-                        <span class="button__text">Log In Now</span>
+                        <span class="button__text" value="Login" onclick="login()">Log In Now</span>
                         <i class="button__icon fas fa-chevron-right"></i>
                     </button>				
                 </form>
@@ -93,7 +93,16 @@
 
 
 
-
+<script>
+    function login(){
+      document.getElementById("form");
+    if(loginForm.username.value && loginForm.password.value){
+    var username = document.getElementById('username').value;
+    alert("username is "+username);
+    
+    }
+}
+</script>
 
 
 
